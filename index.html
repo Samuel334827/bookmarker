@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Yuji+Mai&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="alert d-none" id="alert">
+        <div class="inner p-3">
+            <div class="icons d-flex justify-content-between">
+                <ul class="list-unstyled d-flex ">
+                    <li class="lista rounded-circle bg-danger"></li>
+                    <li class="lista rounded-circle bg-warning"></li>
+                    <li class="lista rounded-circle bg-success"></li>
+                </ul>
+                <i class="fa-solid fa-xmark close" id="closebtn"></i>
+            </div>
+            <div class="innercaption">
+                <h5 class="fw-bolder">Site Name or Url is not valid, Please follow the rules below :</h5>
+                <div class="tip1 d-flex">
+                    <i class="fa-regular  fa-circle-right px-2 pt-1"></i>
+                    <h6 class="">Site name must contain 3 to 10 characters</h6>
+                </div>
+                <div class="tip2 d-flex">
+                    <i class="fa-regular  fa-circle-right px-2 pt-1"></i>
+                    <h6 class="">Site URL must be a valid one</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="heading">
+        <div class="container">
+            <div class="title py-5">
+                <h1 class="text-uppercase mx-auto fw-bold">bookmarker</h1>
+            </div>
+            <div class="second pt-2">
+                <h2 class="text-center">
+                    <i class="fa-solid fa-bookmark"></i>
+                    Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark"></i>
+                </h2>
+                <div class="sitename py-3">
+                    <label for="sitename" class="form-label fw-bolder">
+                        <i class="fa-solid fa-book-bookmark pe-1"></i>
+                        Site Name
+                    </label>
+                    <input type="text" id="sitename" oninput="validation(this)" class="is-invalid form-control" placeholder="Bookmark Name">
+
+                    <label for="siteurl" class="form-label fw-bolder pt-3">
+                        <i class="fa-solid fa-link pe-1"></i>
+                        Site URL
+                    </label>
+                    <input type="text" id="siteurl" oninput="validation(this)" class="is-invalid form-control" placeholder="Website URL">
+                    <div class="d-flex justify-content-center mt-2">
+                        <input class="btn oranged px-5" onclick="Add()" id="submit" type="submit" value="Submit">
+                    </div>
+                    
+                </div>
+            </div>
+            <table class="table mt-4 ">
+                <thead>
+                  <tr class="text-center">
+                    <th  scope="col">Index</th>
+                    <th scope="col">Website Name</th>
+                    <th scope="col">Visit</th>
+                    <th scope="col">Delete</th>
+                  </tr>
+                </thead>
+                <tbody id="tableBody">
+                    
+                </tbody>
+              </table>
+        </div>    
+    </section>
+    
+
+
+    <script src="js/index.js"></script>
+</body>
+</html>
